@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldgen"
+version = "0.1.0"
+authors = [
+  { name="Ziyang Xie", email="ziyangxie01@gmail.com" },
+]
+description = "A package for 3D scene generation 🌏"
+readme = "README.md"
+requires-python = ">=3.11" 
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "torch>=2.7.0",
+    "torchvision>=0.22.0",
+    "diffusers>=0.33.1",
+    "xformers>=0.0.30",
+    "transformers>=4.48.3",
+    "py360convert>=0.1.0",
+    "einops>=0.7.0",
+    "pillow>=8.0.0",
+    "scikit-image>=0.24.0",
+    "sentencepiece>=0.2.0",
+    "peft>=0.7.1",
+    "open3d>=0.19.0",
+    "trimesh>=4.6.1",
+    "nunchaku @ https://github.com/mit-han-lab/nunchaku/releases/download/v0.2.0/nunchaku-0.2.0+torch2.7-cp311-cp311-linux_x86_64.whl",
+    "viser @ git+https://github.com/ZiYang-xie/viser.git", # Modified viser to show double-side texture mesh to better view the scene
+    "UniK3D @ git+https://github.com/lpiccinelli-eth/UniK3D.git",
+    # "pytorch3d @ git+https://github.com/facebookresearch/pytorch3d.git",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"] 
+
+[tool.setuptools.dynamic]
+version = {attr = "worldgen.__version__"} 
