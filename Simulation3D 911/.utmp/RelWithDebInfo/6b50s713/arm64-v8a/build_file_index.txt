@@ -1,0 +1,2 @@
+D:\Simulation3D 820\Simulation3D 3\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\Simulation3D 820\Simulation3D 3\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
